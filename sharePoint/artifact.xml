@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="insertFile" groupId="com.example.sharePoint.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/insertFile.xml</file>
+    </artifact>
+    <artifact name="createFolder" groupId="com.example.sharePoint.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/createFolder.xml</file>
+    </artifact>
+    <artifact name="createSite" groupId="com.example.sharePoint.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/createSite.xml</file>
+    </artifact>
+    <artifact name="createList" groupId="com.example.sharePoint.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/createList.xml</file>
+    </artifact>
+    <artifact name="insertForm" groupId="com.example.sharePoint.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/insertForm.xml</file>
+    </artifact>
+    <artifact name="refreshToken" groupId="com.example.sharePoint.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/refreshToken.xml</file>
+    </artifact>
+</artifacts>

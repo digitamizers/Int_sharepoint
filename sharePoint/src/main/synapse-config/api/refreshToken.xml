@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sp/refreshToken" name="refreshToken" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <property name="resource" scope="default" type="STRING" value="00000003-0000-0ff1-ce00-000000000000/digitamize.sharepoint.com@8461bc96-99c2-429e-990f-613708dc29c8"/>
+            <property name="redirectUri" scope="default" type="STRING" value="https://techforce.ai"/>
+            <property name="refreshToken" scope="default" type="STRING" value="IAAAAF8SFc0HyXJivof3DRJwEfUnXSZaG1znGotDrLQSPWkO-aPc-skAXq4d1_wDcZiYp2toqqrPIZOmKpNQOLz3grXsfxwlpgozMIcfKCCCr6dzySmYMS5oEQ7_aybeTEHdnr3S5VHzlVVFP95WuMIH2mNq8IWqiQo_t9Mi0nw0a746Vghj0oksJHaTeYz8ce70OAZdJC1fgRU93Bh0XNcxJgjrMCCBiK5QLov4t0qkchxDNVQSQSVOs4NP8kzmNZZvuBt60Uvn1ogE1E6-rbjSAZc7fVDnbfqCUohZdOlBcyGgM6akkdEhTgjxyC7GlWT587yS6kZEwJqeJ0V5TC-TKb4"/>
+            <property name="clientSecret" scope="default" type="STRING" value="EWU0A33pFlpGYvLwAuPT9DnMY5CeAMEWwPlB/xdOtx0="/>
+            <property name="clientId" scope="default" type="STRING" value="4790b2d7-2d27-4bbf-bfa1-96f0dc2b1ada@8461bc96-99c2-429e-990f-613708dc29c8"/>
+            <property name="id" scope="default" type="STRING" value="8461bc96-99c2-429e-990f-613708dc29c8"/>
+            <property expression="json-eval($.['sharepoint.url'].stringValue)" name="sharepointURL" scope="default" type="STRING"/>
+            <property expression="json-eval($.['sharepoint.siteName'].stringValue)" name="sharepointSite" scope="default" type="STRING"/>
+            <property expression="fn:concat(get-property('sharepointURL'),'/sites/',get-property('sharepointSite'))" name="apiUrl" scope="default" type="STRING"/>
+            <sharepoint.getAccessTokenFromRefreshToken>
+                <resource>{$ctx:resource}</resource>
+                <refreshToken>{$ctx:refreshToken}</refreshToken>
+                <clientId>{$ctx:clientId}</clientId>
+                <clientSecret>{$ctx:clientSecret}</clientSecret>
+                <id>{$ctx:id}</id>
+                <redirectUri>{$ctx:redirectUri}</redirectUri>
+            </sharepoint.getAccessTokenFromRefreshToken>
+            <property expression="json-eval($.access_token)" name="accessToken" scope="default" type="STRING"/>
+            <property expression="json-eval($.expires_in)" name="intervalTime" scope="default" type="STRING"/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
