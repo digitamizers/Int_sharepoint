@@ -33,10 +33,6 @@
                 <id>{$ctx:id}</id>
                 <redirectUri>{$ctx:redirectUri}</redirectUri>
             </sharepoint.init>
-            <sharepoint.createFolder>
-                <type>SP.Folder</type>
-                <serverRelativeUrl>{$ctx:serverRelativeUrl}</serverRelativeUrl>
-            </sharepoint.createFolder>
             <respond/>
         </inSequence>
         <outSequence>
