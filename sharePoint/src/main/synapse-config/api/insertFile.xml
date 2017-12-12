@@ -31,6 +31,7 @@
                 <clientSecret>{$ctx:clientSecret}</clientSecret>
                 <id>{$ctx:id}</id>
                 <redirectUri>{$ctx:redirectUri}</redirectUri>
+                <registryPath>connector/sharepoint</registryPath>
             </sharepoint.init>
             <fileconnector.read>
                 <source>file:///C:/WS02/workspace/script.txt</source>

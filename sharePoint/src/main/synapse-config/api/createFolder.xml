@@ -32,6 +32,7 @@
                 <clientSecret>{$ctx:clientSecret}</clientSecret>
                 <id>{$ctx:id}</id>
                 <redirectUri>{$ctx:redirectUri}</redirectUri>
+                <registryPath>connector/sharepoint</registryPath>
             </sharepoint.init>
             <sharepoint.createFolder>
                 <type>SP.Folder</type>
